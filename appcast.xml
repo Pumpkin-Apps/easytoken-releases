@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+  <channel>
+    <title>EasyToken</title>
+    <link>https://raw.githubusercontent.com/Pumpkin-Apps/easytoken-releases/main/appcast.xml</link>
+    <description>Most recent EasyToken updates.</description>
+    <language>en</language>
+    <!-- NEW_ITEMS_BELOW -->
+  </channel>
+</rss>
