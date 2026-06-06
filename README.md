@@ -6,7 +6,7 @@
 
 ### All your AI coding usage. One menu bar. One glance.
 
-**EasyToken** is the macOS app that tracks how much of your AI coding tools you've used — **Claude, OpenAI Codex, Cursor, GitHub Copilot, and MiniMax** — all in one place. Live gauges in your menu bar, a rich popover with the full breakdown, and a native desktop widget. No spreadsheets, no guessing, no surprise limits.
+**EasyToken** is the macOS app that tracks how much of your AI coding tools you've used — **Claude, OpenAI Codex, Cursor, GitHub Copilot, and MiniMax** — all in one place. Live gauges in your menu bar, a rich popover with the full breakdown, a native desktop widget, and — when you want it — spend totals, alerts, forecasts, and trends across every tool. No spreadsheets, no guessing, no surprise limits.
 
 [**⬇️ Download the latest version**](https://github.com/Pumpkin-Apps/easytoken-releases/releases/latest) &nbsp;·&nbsp; macOS 14 Sonoma or later &nbsp;·&nbsp; Apple Silicon + Intel
 
@@ -26,7 +26,7 @@ EasyToken fixes that. It's the **one app focused entirely on multi-provider AI u
 - 👀 **Easy to see.** Live percentage + time-remaining gauges sit right in your menu bar. Glance up, know instantly.
 - 🖥️ **Easy to keep around.** A native macOS desktop widget puts your usage rings on your wallpaper or in Notification Center.
 - ⚙️ **Easy to configure.** Connect each provider with a toggle, pick what each menu-bar gauge shows, and you're done.
-- 🔒 **Private by default.** EasyToken reads your usage from local files and your own accounts. Your data stays on your Mac.
+- 🔒 **Private by default.** EasyToken reads your usage from local files and your own accounts. Your usage data stays on your Mac.
 
 ---
 
@@ -71,11 +71,33 @@ A native WidgetKit widget shows a ring gauge per provider with its key number an
 
 ### ⚙️ Settings — connect once, configure to taste
 
-Flip a toggle to connect each provider. For most tools there's **nothing to copy-paste** — EasyToken reads what's already on your Mac. Per provider, choose exactly what the menu bar and widget display (session %, weekly %, spend, time left, and more).
+Flip a toggle to connect each provider. For most tools there's **nothing to copy-paste** — EasyToken reads what's already on your Mac. Per provider, choose exactly what the **menu bar** and **widget** display independently — show a provider in one surface, the other, or both.
 
 <div align="center">
-<img src="assets/settings.png" width="320" alt="EasyToken Settings showing per-provider connection toggles and menu-bar display options" />
+<img src="assets/settings.png" width="400" alt="EasyToken Settings showing per-provider connection toggles with independent Menu bar and Widget surface controls" />
 </div>
+
+---
+
+## Power features — turn on what you want
+
+EasyToken stays a clean at-a-glance tracker by default. Everything below is **opt-in** in Settings → Insights, so the classic menu bar and widget look exactly the same until you decide you want more.
+
+### 🧮 Insights overview
+
+One tab with your **all-in monthly spend across every tool** — subscription fees + API usage + overage, ranked — plus a **30-day usage trend chart**, **end-of-cycle forecasts** ("at this pace you'll hit your limit before it resets"), and a live **"best tool right now"** recommendation based on which connected tool has the most headroom.
+
+<div align="center">
+<img src="assets/popover-insights.png" width="270" alt="Insights tab: best tool now, spend command center, daily token chart, forecast by provider, right-sizing nudges, CSV export" />
+</div>
+
+- ⚡ **Best tool right now** — always shows which connected tool has the most headroom so you route work to whatever won't throttle you.
+- 🔔 **Threshold alerts** — get a native notification before you hit a cap. Once per cycle, never spammy, never on stale data.
+- 🌙 **Deep Work mode** — mute alerts while you're in the zone.
+- 💡 **Right-sizing nudges** — gentle "paying for it, barely using it?" flags for subscriptions you've left idle.
+- 📤 **Export** — one click to save your usage history as a CSV for your own analysis or expense reports.
+- ⌨️ **Shortcuts & terminal** — a bundled `easytoken-cli` and Apple Shortcuts actions let you query usage or "best tool now" from the terminal, Raycast, Alfred, or a Shortcut.
+- 🛟 **Never silently stale** — EasyToken tracks each provider's last successful update and clearly marks data as stale rather than showing you a confidently wrong number.
 
 ---
 
@@ -85,9 +107,12 @@ Flip a toggle to connect each provider. For most tools there's **nothing to copy
 | --- | --- | --- |
 | **Claude** (Claude Code / Claude.ai) | 5-hour + weekly limits, tokens, cost, model mix | Sign in with Claude Code — reads local session files, no API key |
 | **OpenAI Codex** | 5-hour + weekly rate limits, tokens, models | Reads the Codex CLI's local session files — no login |
+| **OpenAI API** | Monthly API spend vs. your budget, daily usage | Paste an org Admin key (optional) |
 | **Cursor** | Monthly spend, plan, acceptance, code attribution | Stay signed in to Cursor — reads local data + your account |
 | **GitHub Copilot** | Quota and token usage | Reads VS Code's local Copilot logs |
 | **MiniMax** | 5-hour + weekly request windows | Quick in-app sign-in — no API key needed |
+
+> Want true all-in spend? Add your flat monthly subscription cost per provider in Settings and the Insights overview combines it with API/overage charges for a real total.
 
 ---
 
@@ -95,11 +120,11 @@ Flip a toggle to connect each provider. For most tools there's **nothing to copy
 
 1. [**Download the latest DMG**](https://github.com/Pumpkin-Apps/easytoken-releases/releases/latest).
 2. Open it and drag **EasyToken** to your Applications folder.
-3. Launch it — a friendly onboarding walks you through connecting each provider.
-4. Open **Settings** to turn providers on/off and choose what each menu-bar gauge shows.
+3. Launch it — a friendly onboarding walks you through a quick email verification (**founding users lock in free lifetime access** when paid plans launch) and connecting each provider.
+4. Open **Settings** to turn providers on/off, choose what each menu-bar/widget gauge shows, and flip on any Insights features you want.
 5. (Optional) Right-click your desktop → **Edit Widgets** → search **"EasyToken"** to add the widget.
 
-> 💡 Turn on **Launch at Login** in Settings so your gauges and widget stay live in the background.
+> 💡 Turn on **Launch at Login** in Settings so your gauges, widget, and alerts stay live in the background.
 
 ---
 
@@ -107,9 +132,9 @@ Flip a toggle to connect each provider. For most tools there's **nothing to copy
 
 EasyToken is built to keep your data yours:
 
-- It reads usage from **local files** your tools already write, and from **your own signed-in accounts**.
+- Your **usage data stays on your Mac.** EasyToken reads it from **local files** your tools already write and from **your own signed-in accounts** — there's no EasyToken server collecting your activity.
 - Credentials are stored on your Mac (in the system Keychain where applicable).
-- There's **no EasyToken server** collecting your usage — nothing about your activity is sent to us.
+- The one thing you share is the **email you verify at setup**, used to send product updates and grant founding-user access — nothing about your actual usage.
 
 ---
 
