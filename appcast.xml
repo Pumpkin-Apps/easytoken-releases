@@ -7,6 +7,14 @@
     <language>en</language>
     <!-- NEW_ITEMS_BELOW -->
     <item>
+      <title>Version 1.1.11</title>
+      <pubDate>Mon, 02 Nov 2026 00:09:25 -0800</pubDate>
+      <sparkle:version>14</sparkle:version>
+      <sparkle:shortVersionString>1.1.11</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+      <enclosure url="https://github.com/Pumpkin-Apps/easytoken-releases/releases/download/v1.1.11/EasyToken-1.1.11.dmg" sparkle:edSignature="WTkzK6f/2HExIW61XlKtFakvRlIja2mB9SR6PuxcKYF1FgBpoexnxoSF2esA63mu8Fkl5+c6C8PtVv29PUWiBA==" length="6101230" type="application/octet-stream" />
+    </item>
+    <item>
       <title>Version 1.1.10</title>
       <pubDate>Sun, 01 Nov 2026 23:44:29 -0800</pubDate>
       <sparkle:version>13</sparkle:version>
